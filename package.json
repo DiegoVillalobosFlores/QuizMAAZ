@@ -1,0 +1,26 @@
+{
+  "name": "quiz-maaz",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Repo for the quiz platform QuizMAAZ",
+  "repository": "https://https://github.com/DiegoVillalobosFlores/QuizMAAZ.git",
+  "author": "Villalobos <diegovillalobos397@gmail.com>",
+  "private": true,
+  "scripts": {
+    "test": "nyc ava",
+    "start-server": "node -r esm src/api/server.js"
+  },
+  "workspaces": ["quiz-maaz-node", "quiz-maaz-next"],
+  "devDependencies": {
+    "ava": "3.15.0",
+    "eslint": "7.24.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "2.22.1",
+    "nyc": "15.1.0"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  }
+}

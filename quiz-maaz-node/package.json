@@ -1,0 +1,13 @@
+{
+  "name": "quiz-maaz-node",
+  "version": "1.0.0",
+  "description": "Node backend for the QuizMAAZ project",
+  "repository": "https://https://github.com/DiegoVillalobosFlores/QuizMAAZ.git",
+  "author": "Villalobos <diegovillalobos397@gmail.com>",
+  "private": false,
+  "dependencies": {
+    "fastify": "3.14.2",
+    "dayjs": "1.10.4",
+    "esm": "3.2.25"
+  }
+}
