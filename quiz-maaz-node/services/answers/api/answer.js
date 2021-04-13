@@ -14,10 +14,9 @@ class Answer {
     };
   }
 
-  async set({questionId, id, description, value}) {
-    if(!questionId) throw new Error(`An answer should always be associated with a question with a valid ID, given: ${questionId}`);
+  async set({id, description, value}) {
     const {key, newId} = this.getAnswerId(id);
-    const result = await this.hash.add(key, {description, value, questionId, id: newId});
+    const result = await this.hash.add(key, {description, value, id: newId});
     if(result === 4) return newId;
     return 'Failed to add Answer';
   }
