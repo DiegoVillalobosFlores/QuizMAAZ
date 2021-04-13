@@ -19,6 +19,11 @@ export default (redis, prefix) => {
       'post',
       `${prefix}/addAnswerToSet`,
       async (request) => answerSet.set(request.body)
+    ],
+    [
+      'get',
+      `${prefix}/getAnswerSet`,
+      async (request) => answerSet.get(request.query)
     ]
   ];
 };

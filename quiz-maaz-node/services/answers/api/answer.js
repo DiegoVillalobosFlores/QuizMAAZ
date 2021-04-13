@@ -1,5 +1,5 @@
-import Hash from 'redis-skinny-wrapper/src/src/hash';
 import uniqid from 'uniqid';
+import Hash from 'redis-skinny-wrapper/src/hash';
 
 class Answer {
   constructor(redis) {

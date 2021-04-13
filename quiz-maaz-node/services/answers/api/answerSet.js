@@ -1,6 +1,6 @@
-import SortedSet from 'redis-skinny-wrapper/src/src/sortedSet';
 import uniqid from 'uniqid';
 import Answer from './answer';
+import SortedSet from 'redis-skinny-wrapper/src/sortedSet';
 
 class AnswerSet {
   constructor(redis) {
@@ -22,7 +22,7 @@ class AnswerSet {
       const answer = await this.answer.get({id: answerId});
       if(!answer) throw new Error(`Invalid Answer ID, given: ${answer.id}`);
       const result = await this.sortedSet.add(key, answer.id, answer.value);
-      if(!result) throw new Error(`Failed to add answer ${answerId} to set ${newId}`);
+      if(isNaN(result)) throw new Error(`Failed to add answer ${answerId} to set ${newId}`);
     }
     return newId;
   }
