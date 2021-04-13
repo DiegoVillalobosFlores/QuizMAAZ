@@ -1,11 +1,11 @@
 'use strict';
 import fastify from 'fastify';
-import AnswerService from './answers';
 import QuestionService from './question';
+import TeamService from './team';
 
 const server = fastify({logger: true});
 
-[...AnswerService, ...QuestionService].forEach(([type, route, callback]) => server[type](route,callback));
+[...QuestionService, ...TeamService].forEach(([type, route, callback]) => server[type](route,callback));
 
 const start = async () => {
   try {
