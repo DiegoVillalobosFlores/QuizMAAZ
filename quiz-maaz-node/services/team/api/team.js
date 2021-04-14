@@ -14,9 +14,9 @@ export default class Team {
     };
   }
 
-  async set({id, name, score, teamMembersId}) {
+  async set({id, name, teamMembersId}) {
     const {newId, key} = this.getTeamKey(id);
-    const result = await this.hash.add(key, {id: newId, name, score, teamMembersId});
+    const result = await this.hash.add(key, {id: newId, name, teamMembersId});
     if(!result) throw new Error('Unable to add Team');
     return newId;
   }

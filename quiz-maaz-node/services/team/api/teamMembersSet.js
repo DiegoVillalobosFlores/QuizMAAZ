@@ -25,12 +25,7 @@ export default class TeamMembersSet {
 
   async get ({id}) {
     if(!id) throw new Error(`Invalid Team Members id, given: ${id}`);
-    const result = await this.sortedSet.range(this.getTeamMembersKey(id).key, true);
-    const members = [];
-    for (let i = 0 ; i < result.length ; i += 2) {
-      members.push({answer: result[i], value: result[i + 1]});
-    }
-    return members;
+    return this.sortedSet.range(this.getTeamMembersKey(id).key, true);
   }
 
 }

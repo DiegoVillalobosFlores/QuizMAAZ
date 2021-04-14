@@ -26,12 +26,9 @@ export default class QuestionAnswersSet {
 
 
   async get ({id}) {
-    if(!id) throw new Error(`Invalid Answer Set ID, given: ${id}`);
+    if (!id) throw new Error(`Invalid Answer Set ID, given: ${id}`);
     const result = await this.sortedSet.range(this.getQuestionAnswersSetKey(id).key, true);
-    const answers = [];
-    for (let i = 0 ; i < result.length ; i += 2) {
-      answers.push({answer: result[i], value: result[i + 1]});
-    }
-    return answers;
+    if (!result) throw new Error(`Unable to find questionAnswerSet: ${id}`);
+    return result;
   }
 }
