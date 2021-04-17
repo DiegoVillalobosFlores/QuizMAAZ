@@ -8,22 +8,22 @@ export default (redis, prefix) => {
     [
       'post',
       `${prefix}/addTeam`,
-      (request) => team.set(request.body)
+      (request) => team.set(request.body),
     ],
     [
       'get',
       `${prefix}/getTeam`,
-      (request) => team.get(request.query)
+      (request) => team.get(request.query),
     ],
     [
       'post',
       `${prefix}/addTeamMembers`,
-      (request) => teamMembers.set(request.body)
+      (request) => teamMembers.set(request.body),
     ],
     [
       'get',
       `${prefix}/getTeamMembers`,
-      (request) => teamMembers.get(request.query)
-    ]
+      (request) => teamMembers.get(request.query),
+    ],
   ];
 };

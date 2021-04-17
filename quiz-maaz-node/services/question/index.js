@@ -3,6 +3,4 @@ import Routes from './routes';
 
 const redis = new Redis();
 
-const routes = Routes(redis, '/questions');
-
-export default routes;
+export default Routes(redis, '/questions');

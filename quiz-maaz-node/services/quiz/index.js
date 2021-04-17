@@ -3,4 +3,4 @@ import Routes from './routes';
 
 const redis = new Redis();
 
-export default Routes(redis, '/teams');
+export default Routes(redis, 'quizzes');

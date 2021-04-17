@@ -3,5 +3,5 @@ import QuestionAnswersSet from './questionAnswersSet';
 
 export default {
   Question,
-  QuestionAnswersSet
+  QuestionAnswersSet,
 };

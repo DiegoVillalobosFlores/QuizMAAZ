@@ -3,5 +3,5 @@ import CategoryQuestionSet from './categoryQuestionSet';
 
 export default {
   Category,
-  CategoryQuestionSet
+  CategoryQuestionSet,
 };
