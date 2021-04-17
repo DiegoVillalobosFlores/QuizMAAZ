@@ -40,4 +40,4 @@ jobs:
           ${{ runner.os }}-
     - run: npm install --global yarn
     - run: yarn
-    - run: yarn lint
+    - run: yarn workspace quiz-maaz-node lint
