@@ -3853,10 +3853,10 @@ redis-parser@^3.0.0:
   dependencies:
     redis-errors "^1.0.0"
 
-redis-skinny-wrapper@5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/redis-skinny-wrapper/-/redis-skinny-wrapper-5.1.1.tgz#4f964e7a65a8938e1238b817eed536da6dfd208d"
-  integrity sha512-trlXj+4TTfHZmEwcNVnZrnGbtdGDOqkaX8oasfE24xcDbQJeHJCtp3KKvwCQNiyv3eSpVbHDvvnKZ3nhCLAWVA==
+redis-skinny-wrapper@6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/redis-skinny-wrapper/-/redis-skinny-wrapper-6.0.1.tgz#06f499d87ae0514a0fe113d7c99c91c6a2eab26c"
+  integrity sha512-5JMUKWyT+wqWblrh1pKmo/vKOSC9nm806rrgT7UuzZ4Mtkh2RsumOWUjt1ztr74srY25KQPqdNvSam3hj8tNVA==
   dependencies:
     esm "3.2.25"
     flat "5.0.2"
