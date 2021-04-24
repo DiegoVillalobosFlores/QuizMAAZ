@@ -15,7 +15,7 @@ const server = fastify({ logger: true });
 
 const start = async () => {
   try {
-    await server.listen(3000);
+    await server.listen(process.env.port || 3001);
   } catch (e) {
     server.log.error(e);
     process.exit(1);

@@ -14,5 +14,10 @@ export default (redis, prefix) => {
       `${prefix}/getQuiz`,
       (request) => quiz.get(request.query),
     ],
+    [
+      'get',
+      `${prefix}/getSchema`,
+      (request) => quiz.getSchema(request.query),
+    ],
   ];
 };
