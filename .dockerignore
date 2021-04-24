@@ -1,0 +1,8 @@
+node_modules
+/quiz
+.next
+*.log
+.env
+.lighthouseci
+.vscode
+.idea
