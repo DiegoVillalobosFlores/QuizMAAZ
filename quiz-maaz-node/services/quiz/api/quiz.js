@@ -20,6 +20,8 @@ export default class Quiz {
     id, quiz,
   }) {
     const { key, newId } = getQuizKey(id);
+    const newSchema = this.automatic.generateSchema({ id: newId, quiz });
+    this.automatic.setSchema(newSchema);
     await this.automatic.add(key, { id: newId, quiz });
 
     return newId;
